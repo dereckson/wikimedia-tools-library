@@ -1,0 +1,41 @@
+This repository contains PHP classes offering standard features to kickstart the development of a tool on Wikimedia Tool Labs.
+
+Classes offered
+===============
+
+MediaWikiPage
+-------------
+
+Represents a page, an article
+
+* getId: get page identified
+* getNormalizedTitle, getDisplayTitle, getFullDisplayTitle, getNormalizedTitleForPage S, getDisplayTitleForPage S: get titles
+* resolveRedirectFromPageId S, resolveRedirect: resolves a redirect
+* isValidNamespaceIdentifier S: determines if it's a valid namespace identifier for this wiki
+
+MediaWikiProject
+----------------
+
+Represents a project e.g. commons.wikimedia.org
+
+
+* getWikimediaProject S: factory constructor
+* getNamespaces, getAPIEntryPointURL, getEntryPointURL, getApplicationURL: gets information about the MediaWiki installation
+
+WikipediaProject
+----------------
+
+Represents a MediaWiki project, with specific features to Wikipedia
+e.g. fr.wikipedia.org
+
+* isValidCode S: checks if the code seems valid
+
+ReplicationDataseFactory
+------------------------
+
+Factory class to get a mysqli instance for a database hosted on the Tool Labs.
+
+Core
+----
+
+* dprint_r: print_r, wrapped in preformatted HTML tags
